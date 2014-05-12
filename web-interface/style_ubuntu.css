@@ -1,0 +1,114 @@
+@font-face{
+	font-family:font_acoj;
+	src:
+	local('Ubuntu'),
+	local('Roboto'),
+	local('LiHei Pro'),
+	local('微軟正黑體'),
+	local('AR PL UKai TW'),
+	local('Times New Roman'),
+	local('Microsoft JhengHei'),
+	local('MingLiU'),
+	local('PMingLiU'),
+	local('DFKai-SB');
+}
+@font-face{
+	font-family:font_acoj;
+	unicode-range:U+00-024F;
+	src:
+	local('Ubuntu'),
+	local('Georgia'),
+	local('Serif');
+	local('Latin Modern Roman'),
+	local('Times New Roman'),
+}
+@font-face{
+	font-family:font_monospace;
+	src:
+	local('Monospace'),
+	local('Consolas')
+	local('Monaco')
+	local('Bitstream Vera Sans Mono'),
+	local('Courier New'),
+	local('Courier'),
+	local('monospace');
+}
+body{
+	font-family:font_acoj;
+	font-size:12pt;
+	background-color:white;
+	color:black;
+}
+a{
+	text-decoration:none;
+}
+a:link{
+	color:#0000FF;
+}
+a:visited{
+	color:#0000FF;
+}
+a:hover{
+	color:#0000FF;
+}
+a:active{
+	color:#0000FF;
+}
+div.menu{
+	position:fixed;
+	z-index:1;
+	top:0px;
+	left:0px;
+	right:0px;
+	padding:8px;
+	text-align:center;
+	background-color:#FFFFFF;
+	color:black;
+	box-shadow:0px 0px 40px 0px rgba(0,0,0,0.2);
+}
+div.menu_left{
+	position:fixed;
+	z-index:2;
+	top:0px;
+	left:0px;
+	padding:8px;
+	color:black;
+}
+div.menu_right{
+	position:fixed;
+	z-index:2;
+	top:0px;
+	right:0px;
+	padding:8px;
+	color:black;
+}
+table.shadow{
+	border-collapse:collapse;
+}
+table.shadow td{
+	border:1px solid lightgray;
+	padding:4px;
+}
+textarea.shadow{
+	border:1px solid lightgray;
+}
+textarea{
+	border:1px solid lightgray;
+}
+input{
+	border:1px solid lightgray;
+}
+div.border_page{
+	margin:0px auto;
+	width:840px;
+}
+div.border_centerl{
+	margin:0px auto;
+	width:auto;
+}
+div.bordered{
+	visibility:hidden;
+}
+span.highlighted_cpp{
+	visibility:hidden;
+}

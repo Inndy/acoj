@@ -1,0 +1,19 @@
+./testdata/
+./testarea/
+localhost
+acoj
+
+acoj
+2
+1016
+1015
+
+path of testdata
+path of testarea
+host of mysql database
+username of mysql database
+password of mysql database
+database of mysql database
+count of cores
+uid of rater (name: acoj-rtr)
+uid of executer (name: acoj-exe)

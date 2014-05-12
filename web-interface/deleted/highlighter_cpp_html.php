@@ -1,0 +1,287 @@
+<?php
+/*
+   acoj web shell
+   ./highlighter_cpp_html.php
+   Deprecated.
+ */
+function highlighter_cpp_html($content){
+	$stringset_keywords=array(
+			'bool',
+			'break',
+			'case',
+			'char',
+			'class',
+			'const',
+			'continue',
+			'do',
+			'double',
+			'else',
+			'extern',
+			'float',
+			'for',
+			'goto',
+			'if',
+			'inline',
+			'int',
+			'iterator',
+			'long',
+			'namespace',
+			'private',
+			'public',
+			'return',
+			'short',
+			'signed',
+			'sizeof',
+			'static',
+			'struct',
+			'switch',
+			'template',
+			'typedef',
+			'unsigned',
+			'using',
+			'void',
+			'while'
+				);
+	$stringset_library=array(
+			'FILE',
+			'exit',
+			'fclose',
+			'fflush',
+			'fgets',
+			'fopen',
+			'fprintf',
+			'fputc',
+			'fputs',
+			'fputs',
+			'freopen',
+			'fscanf',
+			'getchar',
+			'gets',
+			'ios_base',
+			'pclose',
+			'popen',
+			'printf',
+			'puts',
+			'scanf',
+			'setvbuf',
+			'sprintf',
+			'sscanf',
+			'std',
+			'stdin',
+			'stdout',
+			'sync_with_stdio',
+
+			'islower',
+			'isupper',
+			'strcat',
+			'strcmp',
+			'strcpy',
+			'strlen',
+			'strncmp',
+
+			'chdir',
+			'chroot',
+			'execl',
+			'fork',
+			'getpagesize',
+			'kill',
+			'nice',
+			'ptrace',
+			'remove',
+
+			'adjacent_difference',
+			'back',
+			'begin',
+			'binary_search',
+			'cin',
+			'copy',
+			'copy',
+			'count',
+			'count_if',
+			'cout',
+			'empty',
+			'end',
+			'endl',
+			'equal_range',
+			'fill',
+			'first',
+			'for_each',
+			'front',
+			'inner_product',
+			'lower_bound',
+			'max',
+			'max_element',
+			'min',
+			'min_element',
+			'partial_sum',
+			'pop',
+			'push',
+			'push_back',
+			'reverse',
+			'second',
+			'size',
+			'sort',
+			'swap',
+			'top',
+			'unique',
+			'upper_bound'
+				);
+	$stringset_stlcontainers=array(
+			'array',
+			'bitset',
+			'deque',
+			'forward_list',
+			'list',
+			'map',
+			'multimap',
+			'multiset',
+			'pair',
+			'priority_queue',
+			'queue',
+			'set',
+			'stack',
+			'string',
+			'unordered_map',
+			'unordered_set',
+			'vector'
+			);
+	$stringset_constants=array(
+			'EOF',
+			'EXIT_FAILURE',
+			'EXIT_SUCCESS',
+			'INFINITY',
+			'INT_MAX',
+			'INT_MIN',
+			'LONG_MAX',
+			'LONG_MIN',
+			'NULL'
+			);
+	map_inverse($stringset_keywords,$stringset_keywords_);
+	map_inverse($stringset_library,$stringset_library_);
+	map_inverse($stringset_stlcontainers,$stringset_stlcontainers_);
+	map_inverse($stringset_constants,$stringset_constants_);
+	$content=str_replace("\r","",$content);
+	$length_content=strlen($content);
+	$return_value='';
+	for($i=0;$i<$length_content;$i++){
+		// deal with the lines begin with '#'
+		if($content[$i]=='#'){
+			$return_value.='<span style="color:green;">';
+			for(;$i<$length_content;$i++){
+				if($content[$i]=="\n")
+					break;
+				$return_value.=htmlentities($content[$i]);
+				if($content[$i]=='\\'){
+					$i++;
+					$return_value.=htmlentities($content[$i]);
+				}
+				if($i+2<$length_content&&$content[$i+1]=="/"&&$content[$i+2]=="/")
+					break;
+			}
+			$return_value.="</span>";
+			if($i<$length_content&&$content[$i]=="\n");
+			$return_value.=htmlentities($content[$i]);
+			continue;
+		}
+		// deal with the lines begin with '//'
+		if($i+1<$length_content&&
+				$content[$i]=='/'&&
+				$content[$i+1]=='/'){
+			$return_value.='<span style="color:gray;">';
+			for(;$i<$length_content&&$content[$i]!="\n";$i++)
+				$return_value.=htmlentities($content[$i]);
+			$return_value.="</span>\n";
+			continue;
+		}
+		// deal with the lines begin with '/*'
+		if($i+1<$length_content&&
+				$content[$i]=='/'&&
+				$content[$i+1]=='*'){
+			$return_value.='<span style="color:gray;">';
+			for(;
+					$i<$length_content&&
+					!(
+						$i+1<$length_content&&
+						$content[$i]=="*"&&
+						$content[$i+1]=="/"
+					 )
+					;$i++)
+				$return_value.=htmlentities($content[$i]);
+			$return_value.="*/</span>";
+			$i++;
+			continue;
+		}
+		// deal with the lines begin with '"'
+		if($content[$i]=='"'){
+			$return_value.='<span style="color:blue;">"';
+			for($i++;$i<$length_content;$i++){
+				if($content[$i]=='\\'&&$i+1<$length_content){
+					$return_value.=htmlentities($content[$i]);
+					$i++;
+					$return_value.=htmlentities($content[$i]);
+				}else
+					$return_value.=htmlentities($content[$i]);
+				if($content[$i]=='"')
+					break;
+			}
+			$return_value.='</span>';
+			continue;
+		}
+		// deal with the lines begin with '\''
+		if($content[$i]=='\''){
+			$return_value.='<span style="color:blue;">\'';
+			for($i++;$i<$length_content&&$content[$i]!='\'';$i++){
+				if($content[$i]=='\\'&&$i+1<$length_content){
+					$return_value.=htmlentities($content[$i]);
+					$return_value.=htmlentities($content[$i+1]);
+					$i++;
+				}else
+					$return_value.=htmlentities($content[$i]);
+			}
+			$return_value.="'</span>";
+			continue;
+		}
+		if(preg_match("/[()\[\]{}<>+\-*\/%,:;?&^=!~.|]/",$content[$i])){
+			$return_value.="<span style=\"color:red;\">$content[$i]</span>";
+			continue;
+		}
+		$token='';
+		for($j=$i;
+				$j<$length_content&&(
+					$content[$j]=='_'||
+					'A'<=$content[$j]&&$content[$j]<='Z'||
+					'a'<=$content[$j]&&$content[$j]<='z'||
+					$j!=$i&&('0'<=$content[$j]&&$content[$j]<='9')
+					);$j++)
+			$token.=$content[$j];
+		if($token!=''){
+			if(array_key_exists($token,$stringset_keywords_))
+				$return_value.="<span style=\"color:darkblue;\"><b>$token</b></span>";
+			else if(array_key_exists($token,$stringset_library_))
+				$return_value.="<span style=\"color:deeppink;\">$token</span>";
+			else if(array_key_exists($token,$stringset_stlcontainers_))
+				$return_value.="<span style=\"color:limegreen;\"><b>$token</b></span>";
+			else if(array_key_exists($token,$stringset_constants_))
+				$return_value.="<span style=\"color:darkviolet;\"><b>$token</b></span>";
+			else
+				$return_value.=$token;
+			$i+=strlen($token)-1;
+			continue;
+		}
+		$literal='';
+		for($j=$i;
+				$j<$length_content&&(
+					($j!=$i&&($content[$j]=='L'||$content[$j]=='e'||$content[$j]=='.')||
+					 '0'<=$content[$j]&&$content[$j]<='9')
+					);$j++)
+			$literal.=$content[$j];
+		if($literal!=''){
+			$return_value.="<span style=\"color:darkviolet;\">$literal</span>";
+			$i+=strlen($literal)-1;
+			continue;
+		}
+		$return_value.=htmlentities($content[$i]);
+	}
+	return $return_value;
+}
+?>

@@ -1,0 +1,136 @@
+@font-face{
+	font-family:font_acoj;
+	src:
+	local("Ubuntu"),
+	local("Roboto"),
+	local("Microsoft JhengHei"),
+	local("微軟正黑體"),
+	local("Times New Roman"),
+	local("LiHei Pro"),
+	local("MingLiU"),
+	local("PMingLiU"),
+	local("DFKai-SB");
+}
+@font-face{
+	font-family:font_acoj;
+	unicode-range:U+00-024F;
+	src:
+	local("Ubuntu"),
+	local("微軟正黑體"),
+	local('Latin Modern Roman'),
+	local('Times New Roman'),
+	local(Georgia),
+	local(Serif);
+}
+@font-face{
+	font-family:font_monospace;
+	src:
+	local('Monospace'),
+	local('Consolas')
+	local('Monaco')
+	local('Bitstream Vera Sans Mono'),
+	local('Courier New'),
+	local('Courier'),
+	local('monospace');
+}
+body{
+	font-family:font_acoj;
+	font-size:12pt;
+	background-color:white;
+	color:black;
+}
+a{
+	text-decoration:none;
+	color:#0099FF;
+}
+div.menu{
+	text-align:center;
+	top:0;left:0;right:0;height:40px;
+	position:absolute;
+	background-color:#3b5998;
+	border-bottom:1px solid #133783;
+	padding-top:6px;
+	color:lightgray;
+	font-size:20px;
+}
+div.menu a:link{
+	color:lightgray;
+}
+div.menu a:visited{
+	color:lightgray;
+}
+div.menu a:hover{
+	color:#FF0066;
+}
+div.menu a:active{
+	color:#FF0066;
+}
+div.menu_left{
+	position:fixed;
+	z-index:2;
+	top:0px;
+	left:0px;
+	padding:8px;
+	font-size:28px;
+}
+div.menu_left a:link{
+	color:#FFFFFF;
+}
+div.menu_left a:visited{
+	color:#FFFFFF;
+}
+div.menu_left a:hover{
+	color:#FFFFFF;
+}
+div.menu_left a:active{
+	color:#FFFFFF;
+}
+div.menu_right{
+	position:fixed;
+	z-index:2;
+	top:0px;
+	right:0px;
+	padding:8px;
+	color:#FFFFFF;
+}
+h3{
+	color:#000066;
+	font-weight:bold;
+      	text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+      	font-size: 16px;
+	margin: 40px 0 40px 0px;
+	border-bottom:1px solid #000066;
+}
+table.shadow{
+	border-collapse:collapse;
+}
+table.shadow td{
+	border:1px solid lightgray;
+	padding:4px;
+}
+table.shadow tr:hover{
+	background:#D0DFFF;
+}
+textarea.shadow{
+	border:1px solid lightgray;
+}
+textarea{
+	border:1px solid lightgray;
+}
+input{
+	border:1px solid lightgray;
+}
+div.border_page{
+	margin:0px auto;
+	width:100%;
+}
+div.border_centerl{
+	margin:0px auto;
+	width:auto;
+}
+div.bordered{
+	visibility:hidden;
+}
+span.highlighted_cpp{
+	visibility:hidden;
+}
