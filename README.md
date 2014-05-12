@@ -1,4 +1,0 @@
-acoj
-====
-
-Accepted Online Judge
