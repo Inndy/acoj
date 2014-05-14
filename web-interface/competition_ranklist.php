@@ -1,8 +1,8 @@
 <?php
 /*
-   acoj web shell
-   ./competition_ranklist.php
-   parameter: $_GET['id']
+ * ACOJ Web Interface
+ * ./competition_ranklist.php
+ * Parameter: $_GET['id']
  * Version: 2014-05-12
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com

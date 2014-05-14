@@ -1,9 +1,9 @@
 <?php
 /*
  * ACOJ Web Interface
- * testdata_insert.php
+ * ./testdata_insert.php
  * Permission required: administrator
- * Version: 2014-05-11
+ * Version: 2014-05-14
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com
  */
@@ -11,7 +11,7 @@ require_once'./header.php';
 head();
 if($_SERVER['REQUEST_METHOD']==='POST'){
 	if($_FILES["file_input"]["error"]==0){
-		$path="./tmp_file_upload/input.txt";
+		$path="./files_upload_testdata___temporary/input.txt";
 		move_uploaded_file($_FILES["file_input"]["tmp_name"],$path);
 		$file=fopen($path,"r");
 		$input=fread($file,filesize($path));
@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 	}else
 		$input=$_POST['input'];
 	if($_FILES["file_output"]["error"]==0){
-		$path="./tmp_file_upload/output.txt";
+		$path="./files_upload_testdata___temporary/output.txt";
 		move_uploaded_file($_FILES["file_output"]["tmp_name"],$path);
 		$file=fopen($path,"r");
 		$output=fread($file,filesize($path));

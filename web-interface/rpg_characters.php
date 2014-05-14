@@ -1,9 +1,12 @@
 <?php
 /*
-   acoj web shell
-   ./rpg_character_list.php
-   parameters: none.
-   permission required: loggedin.
+ * ACOJ Web Interface
+ * ./rpg_character_list.php
+ * Parameters: none.
+ * Permission required: loggedin.
+ * Version: 2014-05-14
+ * Author: An-Li Alt Ting
+ * Email: anlialtting@gmail.com
  */
 require_once'./header.php';
 function show_operations(){

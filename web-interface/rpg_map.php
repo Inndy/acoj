@@ -1,7 +1,10 @@
 <?php
 /*
-   ACOJ Web Interface
-   ./rpg_map.php
+ * ACOJ Web Interface
+ * ./rpg_map.php
+ * Version: 2014-05-14
+ * Author: An-Li Alt Ting
+ * Email: anlialtting@gmail.com
  */
 require_once'./header.php';
 head();

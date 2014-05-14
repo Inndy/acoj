@@ -1,7 +1,7 @@
 <?php
 /*
-   acoj web shell
-   ./submit.php
+ * ACOJ Web Interface
+ * ./submit.php
  * Version: 2014-05-11
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com

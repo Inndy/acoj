@@ -1,9 +1,11 @@
 <?php
 /*
-   acoj web shell
-   ./submission.php
-   parameters: none.
-   By An-Li Alt Ting. Email: anlialtting@gmail.com
+ * ACOJ Web Interface
+ * ./submission.php
+ * Parameters: none.
+ * Version: 2014-05-14
+ * Author: An-Li Alt Ting
+ * Email: anlialtting@gmail.com
  */
 require_once'./header.php';
 require_once'./highlighter.php';

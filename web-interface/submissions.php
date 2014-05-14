@@ -1,9 +1,12 @@
 <?php
 /*
-   ACOJ Web Interface
-   ./submissions.php
-   Parameters: $_GET[''].
-   Permission required: none.
+ * ACOJ Web Interface
+ * ./submissions.php
+ * Parameters: $_GET[''].
+ * Permission required: none.
+ * Version: 2014-05-14
+ * Author: An-Li Alt Ting
+ * Email: anlialtting@gmail.com
  */
 require_once'./header.php';
 function show_operations(){

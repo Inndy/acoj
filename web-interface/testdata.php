@@ -1,9 +1,9 @@
 <?php
 /*
-   acoj web shell
-   ./testdata.php
-   parameters: $_GET['id_problem'].
-   permission required: none.
+ * ACOJ Web Interface
+ * ./testdata.php
+ * Parameters: $_GET['id_problem'].
+ * permission required: none.
  * Version: 2014-05-11
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com

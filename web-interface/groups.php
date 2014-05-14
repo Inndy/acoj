@@ -1,9 +1,9 @@
 <?php
 /*
-   acoj web shell
-   ./groups.php
-   parameters: none.
-   permission required: none.
+ * ACOJ Web Interface
+ * ./groups.php
+ * Parameters: none.
+ * Permission required: none.
  * Version: 2014-05-12
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com

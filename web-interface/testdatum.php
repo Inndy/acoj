@@ -1,9 +1,9 @@
 <?php
 /*
-   acoj web shell
-   ./testdatum.php
-   parameters: $_GET['id']
-   permission required: administrator
+ * ACOJ Web Interface
+ * ./testdatum.php
+ * Parameters: $_GET['id']
+ * Permission required: administrator
  * Version: 2014-05-11
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com
@@ -26,8 +26,7 @@ function show_operations(){
 function show_body(){
 	global$border_head,$border_tail,$testdatum;
 	echo
-"<script src=\"./mathjax/mathjax-MathJax-727332c/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"></script>
-$border_head
+"$border_head
 <p>
 	ID: {$testdatum['id']}<br>
 	<br>

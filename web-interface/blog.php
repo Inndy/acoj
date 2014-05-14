@@ -71,8 +71,7 @@ $user_blog=mysqli_single_row_select("
 $title=$user_blog['blog_title']!==''
 	?$user_blog['blog_title']
 	:"{$user_blog['username']}'s Blog";
-$wholetitle=$title.($user_blog['blog_subtitle']!==''?" - ".$user_blog['blog_subtitle']:"");
-show_head($wholetitle,!isset($_GET['tid']));
+show_head($title,!isset($_GET['tid']));
 show_blog_menu($id);
 echo
 "<br><h1 style=\"text-align:center;color:gray;\">".nl2br(htmlentities($title))."</h1>

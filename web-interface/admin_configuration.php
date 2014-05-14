@@ -1,10 +1,10 @@
 <?php
 /*
  * ACOJ Web Interface
-   ./admin_configuration.php
- * parameters: none.
- * permission required: administrator.
- * Version: 2014-05-12
+ * ./admin_configuration.php
+ * Parameters: none.
+ * Permission required: administrator.
+ * Version: 2014-05-14
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com
  */

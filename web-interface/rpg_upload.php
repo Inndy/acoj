@@ -1,4 +1,11 @@
 <?php
+/*
+ * ACOJ Web Interface
+ * ./rpg_upload.php
+ * Version: 2014-05-14
+ * Author: An-Li Alt Ting
+ * Email: anlialtting@gmail.com
+ */
 require_once'./header.php';
 head();
 if(!$_SERVER['REQUEST_METHOD']==='POST')

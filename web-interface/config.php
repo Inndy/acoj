@@ -1,8 +1,8 @@
 <?php
 /*
-   acoj web shell
-   ./config.php
- * Version: 2014-05-12
+ * ACOJ Web Interface
+ * ./config.php
+ * Version: 2014-05-14
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com
  */

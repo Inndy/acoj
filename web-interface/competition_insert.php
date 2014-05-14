@@ -1,9 +1,9 @@
 <?php
 /*
-   acoj web shell
-   ./competition_insert.php
-   parameters: none.
-   permission required: administrator
+ * ACOJ Web Interface
+ * ./competition_insert.php
+ * Parameters: none.
+ * Permission required: administrator
  * Version: 2014-05-12
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com

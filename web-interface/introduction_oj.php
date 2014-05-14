@@ -1,7 +1,7 @@
 <?php
 /*
-   acoj web shell
-   instroduction.php
+ * ACOJ Web Interface
+ * ./instroduction.php
  * Version: 2014-05-12
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com

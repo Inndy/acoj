@@ -250,7 +250,7 @@ function check_permission(){
 		echo$mysqli->error;
 	if($count==0){
 		header('location:./');
-		exit(0);
+		exit;
 	}
 }
 function head(){
@@ -289,9 +289,9 @@ function show_head($title,$index=1,$stylesheet_additional=""){
 		<title>".htmlentities($title)."</title>
 		<link rel=\"stylesheet\" type=\"text/css\" href=\"".(isset($_COOKIE['style'])?$_COOKIE['style']:"./style.css")."\">
 		$stylesheet_additional<script src=\"./functions.js\"></script>
-		<script src=\"./highlighter.js\"></script>
 		<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\"></script>
-		<script src=\"./mathjax/mathjax-MathJax-727332c/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"></script>
+		<script src=\"./plugins/altssyntaxhighlighter/highlighter.js\"></script>
+		<script src=\"./plugins/mathjax/mathjax-MathJax-78ea6af/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"></script>
 		<script type=\"text/x-mathjax-config\">
 			MathJax.Hub.Config({
 				tex2jax:{
@@ -330,16 +330,9 @@ function show_menu(){
 	| <a href=\"".htmlentities("{$_SERVER['SCRIPT_NAME']}?".http_build_query(array_merge($_GET,array("header_printfriendly"=>"1"))))."\">Print</a>
 ";
 	if($loggedin){
-		/*
-		   if(isgroup(1))
-		   echo
-		   "	| <a href=\"./immediate.php?id=.{$_SERVER['REQUEST_URI']}\">Immediate</a>
-		   ";
-		 */
 		echo
 "	| <a href=\"javascript:form_logout_quick.submit();\">Logout</a>
 	| <a href=\"./user.php?id={$data_user_current['id']}\">{$data_user_current['username']}</a>
-	(<a href=\"./blog.php?id={$data_user_current['id']}\" target=\"_blank\">Blog</a>)
 ";
 	}else
 		echo
@@ -432,7 +425,7 @@ function show_blog_menu($id){
 	</script>
 	<div id=\"div_main_clock\" class=\"menu_right\">
 		<a href=\"./blog.php?id=$id\">Home</a>
-		| <a href=\"./blog_post.php\">Post</a>
+		| <a href=\"./blog_article_insert.php\">Post</a>
 		| <a href=\"./blog_tags.php\">Tags</a>
 		| <a href=\"javascript:form_logout_quick.submit();\">Logout</a>
 	</div>

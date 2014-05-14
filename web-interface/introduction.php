@@ -1,7 +1,7 @@
 <?php
 /*
-   acoj web shell
-   ./introduction.php
+ * ACOJ Web Interface
+ * ./introduction.php
  * Version: 2014-05-12
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com
@@ -24,6 +24,10 @@ echo
 			Google Chrome</a>.<br>
 		<br>
 		Links:<br>
+		<a
+			href=\"https://github.com/anlialtting/acoj\"
+			target=\"_blank\"
+			>ACOJ GitHub</a>
 		<a
 			href=\"https://www.facebook.com/groups/1426836570878281/\"
 			target=\"_blank\"
@@ -62,16 +66,6 @@ echo
 			<td style=\"width:50%;\"><h4>Judge kernel</h4></td>
 			<td style=\"width:50%;\"><h4>Web shell</h4></td>
 		</tr 
-		<tr style=\"verti al-align:top;\">
-			<td>
-				Version: 2014-01-08<br>
-				Source: <a href=\"./download/acoj-kernel-src.tar.gz\">Download</a><br>
-			</td>
-			<td>
-				Version: 2014-01-08<br>
-				Source: <a href=\"./download/acoj-shell-web-src.tar.gz\">Download</a><br>
-			</td>
-		</tr>
 		<tr>
 			<td colspan=\"2\"><h4>List of servsers</h4></td>
 		</tr>

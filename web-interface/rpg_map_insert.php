@@ -2,7 +2,7 @@
 /*
  * ACOJ Web Interface
  * ./rpg_map_insert.php
- * Version: 2014-05-12
+ * Version: 2014-05-14
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com
  */

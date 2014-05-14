@@ -1,9 +1,9 @@
 <?php
 /*
-   acoj web shell
-   ./problem_update.php
-   parameters: $_GET['id']
-   permission required: administrator
+ * ACOJ Web Interface
+ * ./problem_update.php
+ * Parameters: $_GET['id']
+ * Permission required: administrator
  * Version: 2014-05-12
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com

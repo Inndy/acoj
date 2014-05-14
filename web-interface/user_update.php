@@ -3,7 +3,7 @@
  * ACOJ Web Interface
  * ./user_update.php
  * Permission required: loggedin.
- * Version: 2014-05-11
+ * Version: 2014-05-14
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com
  */

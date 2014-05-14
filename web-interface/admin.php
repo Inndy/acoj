@@ -1,10 +1,12 @@
 <?php
 /*
-   acoj web shell
-   ./admin.php
-   parameters: none.
-   permission required: administrator.
-   By An-Li Alt Ting. Email: anlialtting@gmail.com
+ * ACOJ Web Interface
+ * ./admin.php
+ * Parameters: none.
+ * Permission required: administrator.
+ * Version: 2014-05-14
+ * Author: An-Li Alt Ting
+ * Email: anlialtting@gmail.com
  */
 require_once'./header.php';
 function show_body(){

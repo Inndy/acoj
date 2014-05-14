@@ -1,4 +1,5 @@
 /*
+ * ACOJ Web Interface
  * Version: 2014-05-12
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com
@@ -19,6 +20,6 @@ function html_stars(id,rating){
 	for(var i=0;i<5;i++){
 		partial_rating=rating-0.2*i;
 		img=partial_rating<0.06666?"star-empty":partial_rating<0.1333?"star-half":"star-full";
-		t.innerHTML+="<img src=\"./img/"+img+".png\" style=\"width:18px;\">";
+		t.innerHTML+="<img src=\"./images/"+img+".png\" style=\"width:18px;\">";
 	}
 }

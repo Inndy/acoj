@@ -1,9 +1,12 @@
 <?php
 /*
-   acoj web shell
-   ./testdata_group_update.php
-   parameters: none.
-   permissions: none.
+ * ACOJ Web Interface
+ * ./testdata_group_update.php
+ * Parameters: none.
+ * Permissions: none.
+ * Version: 2014-05-14
+ * Author: An-Li Alt Ting
+ * Email: anlialtting@gmail.com
  */
 require_once'./header.php';
 function post(){

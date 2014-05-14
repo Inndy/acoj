@@ -1,8 +1,8 @@
 <?php
 /*
-   acoj web shell
-   ./blog_sitemap.php
-   parameters: $_GET['id'],$_GET['usr']
+ * ACOJ Web Interface
+ * ./blog_sitemap.php
+ * Parameters: $_GET['id'],$_GET['usr']
  * Version: 2014-05-12
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com

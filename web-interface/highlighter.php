@@ -70,11 +70,7 @@ function text_escape($s){
 				break;
 			case '<':
 				$pl=strpos($s,"@>");
-				if(substr($s,$pf+2,3)=='img'){
-					$x.="<img src=\"".htmlentities(substr($s,$pf+5,$pl-$pf-5))."\">";
-				}else{
-					$x.="<span style=\"font-family:'Monospace','Courier New';\">".htmlentities(substr($s,$pf+2,$pl-$pf-2))."</span>";
-				}
+				$x.="<span style=\"font-family:'Monospace','Courier New';\">".htmlentities(substr($s,$pf+2,$pl-$pf-2))."</span>";
 				$s=substr($s,$pl+2);
 				break;
 			case '(':

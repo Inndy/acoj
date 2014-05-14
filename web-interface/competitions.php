@@ -1,7 +1,7 @@
 <?php
 /*
-   acoj web shell
-   ./competitions.php
+ * ACOJ Web Interface
+ * ./competitions.php
  * Version: 2014-05-12
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com

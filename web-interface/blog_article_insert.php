@@ -1,7 +1,7 @@
 <?php
 /*
-   acoj web shell
-   ./blog_post.php
+ * ACOJ Web Interface
+ * ./blog_post.php
  * Version: 2014-05-12
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com

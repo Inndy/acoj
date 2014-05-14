@@ -1,9 +1,9 @@
 <?php
 /*
-   acoj web shell
-   ./competition_update.php
-   parameters: $_GET['id'].
-   permission required: administrator.
+ * ACOJ Web Interface
+ * ./competition_update.php
+ * Parameters: $_GET['id'].
+ * Permission required: administrator.
  * Version: 2014-05-12
  * Author: An-Li Alt Ting
  * Email: anlialtting@gmail.com

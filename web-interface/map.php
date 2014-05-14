@@ -55,10 +55,10 @@ Style: <a href=\"?style=style.css\">Kernel</a> | <a href=\"?style=style_ubuntu.c
 		".(isgroup(1)?"
 		<td>
 			<a href=\"./admin.php\">Admin</a><br>
-			<a href=\"./phpmyadmin/\" target=\"_blank\">phpMyAdmin</a><br>
 			<a href=\"./admin_configuration.php\">Configuration</a><br>
 			<a href=\"./rpg_characters.php\">RPG</a><br>
 			<a href=\"./problemlists.php\">Problemlists</a><br>
+			<a href=\"./plugins/phpmyadmin/phpMyAdmin-4.2.0-all-languages/\" target=\"_blank\">phpMyAdmin</a><br>
 		</td>
 		":"")."
 		".(isuser(1)?"
